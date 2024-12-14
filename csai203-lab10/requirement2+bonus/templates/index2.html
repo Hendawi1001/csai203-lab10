@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <form action="/add-task" method="POST">
+        <input type="text" name="task" placeholder="write a task" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <h2>Tasks:</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
